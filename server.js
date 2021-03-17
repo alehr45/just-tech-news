@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3001;
 const sequelize = require("./config/connection");
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-sequelize.sync({ force:true }).then(() => {
+sequelize.sync({ force:false }).then(() => {
   app.listen(PORT, () => console.log(`Now listening on ${PORT}`));
 });
 
